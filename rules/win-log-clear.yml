@@ -1,0 +1,24 @@
+{
+  "title": "win log clear",
+  "id": "aebaf140-0bde-40a2-9000-000000000003",
+  "status": "experimental",
+  "description": "Flags normalized windows security_log_change with outcome cleared. Review against approved operations.",
+  "author": "Sonofmecury",
+  "logsource": {
+    "product": "windows"
+  },
+  "detection": {
+    "selection": {
+      "activity": "security_log_change",
+      "outcome": "cleared"
+    },
+    "condition": "selection"
+  },
+  "falsepositives": [
+    "Approved administration or incorrect upstream event classification"
+  ],
+  "level": "high",
+  "tags": [
+    "attack.t1070.001"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "title": "linux audit stop",
+  "id": "aebaf140-0bde-40a2-9000-000000000008",
+  "status": "experimental",
+  "description": "Flags normalized linux audit_service_change with outcome stopped. Review against approved operations.",
+  "author": "Sonofmecury",
+  "logsource": {
+    "product": "linux"
+  },
+  "detection": {
+    "selection": {
+      "activity": "audit_service_change",
+      "outcome": "stopped"
+    },
+    "condition": "selection"
+  },
+  "falsepositives": [
+    "Approved administration or incorrect upstream event classification"
+  ],
+  "level": "high",
+  "tags": [
+    "attack.t1562.001"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "title": "aws trail",
+  "id": "aebaf140-0bde-40a2-9000-000000000012",
+  "status": "experimental",
+  "description": "Flags normalized aws trail_configuration_change with outcome logging_stopped. Review against approved operations.",
+  "author": "Sonofmecury",
+  "logsource": {
+    "product": "aws"
+  },
+  "detection": {
+    "selection": {
+      "activity": "trail_configuration_change",
+      "outcome": "logging_stopped"
+    },
+    "condition": "selection"
+  },
+  "falsepositives": [
+    "Approved administration or incorrect upstream event classification"
+  ],
+  "level": "high",
+  "tags": [
+    "attack.t1562.008"
+  ]
+}

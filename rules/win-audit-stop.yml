@@ -1,0 +1,24 @@
+{
+  "title": "win audit stop",
+  "id": "aebaf140-0bde-40a2-9000-000000000004",
+  "status": "experimental",
+  "description": "Flags normalized windows audit_service_change with outcome stopped. Review against approved operations.",
+  "author": "Sonofmecury",
+  "logsource": {
+    "product": "windows"
+  },
+  "detection": {
+    "selection": {
+      "activity": "audit_service_change",
+      "outcome": "stopped"
+    },
+    "condition": "selection"
+  },
+  "falsepositives": [
+    "Approved administration or incorrect upstream event classification"
+  ],
+  "level": "high",
+  "tags": [
+    "attack.t1562.002"
+  ]
+}

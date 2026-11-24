@@ -1,0 +1,24 @@
+{
+  "title": "win task",
+  "id": "aebaf140-0bde-40a2-9000-000000000002",
+  "status": "experimental",
+  "description": "Flags normalized windows scheduled_task_change with outcome created. Review against approved operations.",
+  "author": "Sonofmecury",
+  "logsource": {
+    "product": "windows"
+  },
+  "detection": {
+    "selection": {
+      "activity": "scheduled_task_change",
+      "outcome": "created"
+    },
+    "condition": "selection"
+  },
+  "falsepositives": [
+    "Approved administration or incorrect upstream event classification"
+  ],
+  "level": "medium",
+  "tags": [
+    "attack.t1053.005"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "title": "app access denied",
+  "id": "aebaf140-0bde-40a2-9000-000000000016",
+  "status": "experimental",
+  "description": "Flags normalized application authorization with outcome denied. Review against approved operations.",
+  "author": "Sonofmecury",
+  "logsource": {
+    "product": "application"
+  },
+  "detection": {
+    "selection": {
+      "activity": "authorization",
+      "outcome": "denied"
+    },
+    "condition": "selection"
+  },
+  "falsepositives": [
+    "Approved administration or incorrect upstream event classification"
+  ],
+  "level": "medium",
+  "tags": [
+    "attack.t1078"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "title": "linux monitor missing",
+  "id": "aebaf140-0bde-40a2-9000-000000000010",
+  "status": "experimental",
+  "description": "Flags normalized linux monitor_health with outcome missing. Review against approved operations.",
+  "author": "Sonofmecury",
+  "logsource": {
+    "product": "linux"
+  },
+  "detection": {
+    "selection": {
+      "activity": "monitor_health",
+      "outcome": "missing"
+    },
+    "condition": "selection"
+  },
+  "falsepositives": [
+    "Approved administration or incorrect upstream event classification"
+  ],
+  "level": "medium",
+  "tags": [
+    "attack.t1562.001"
+  ]
+}

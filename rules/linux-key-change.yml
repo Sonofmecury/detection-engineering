@@ -1,0 +1,24 @@
+{
+  "title": "linux key change",
+  "id": "aebaf140-0bde-40a2-9000-000000000009",
+  "status": "experimental",
+  "description": "Flags normalized linux ssh_key_change with outcome unexpected_added. Review against approved operations.",
+  "author": "Sonofmecury",
+  "logsource": {
+    "product": "linux"
+  },
+  "detection": {
+    "selection": {
+      "activity": "ssh_key_change",
+      "outcome": "unexpected_added"
+    },
+    "condition": "selection"
+  },
+  "falsepositives": [
+    "Approved administration or incorrect upstream event classification"
+  ],
+  "level": "high",
+  "tags": [
+    "attack.t1098.004"
+  ]
+}

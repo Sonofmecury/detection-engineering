@@ -1,0 +1,24 @@
+{
+  "title": "app integrity",
+  "id": "aebaf140-0bde-40a2-9000-000000000019",
+  "status": "experimental",
+  "description": "Flags normalized application receipt_verification with outcome signature_invalid. Review against approved operations.",
+  "author": "Sonofmecury",
+  "logsource": {
+    "product": "application"
+  },
+  "detection": {
+    "selection": {
+      "activity": "receipt_verification",
+      "outcome": "signature_invalid"
+    },
+    "condition": "selection"
+  },
+  "falsepositives": [
+    "Approved administration or incorrect upstream event classification"
+  ],
+  "level": "high",
+  "tags": [
+    "attack.t1565"
+  ]
+}

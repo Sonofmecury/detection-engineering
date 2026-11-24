@@ -1,0 +1,24 @@
+{
+  "title": "aws root",
+  "id": "aebaf140-0bde-40a2-9000-000000000011",
+  "status": "experimental",
+  "description": "Flags normalized aws console_login with identity_type root. Review against approved operations.",
+  "author": "Sonofmecury",
+  "logsource": {
+    "product": "aws"
+  },
+  "detection": {
+    "selection": {
+      "activity": "console_login",
+      "identity_type": "root"
+    },
+    "condition": "selection"
+  },
+  "falsepositives": [
+    "Approved administration or incorrect upstream event classification"
+  ],
+  "level": "high",
+  "tags": [
+    "attack.t1078.004"
+  ]
+}

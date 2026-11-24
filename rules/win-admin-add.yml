@@ -1,0 +1,24 @@
+{
+  "title": "win admin add",
+  "id": "aebaf140-0bde-40a2-9000-000000000001",
+  "status": "experimental",
+  "description": "Flags normalized windows privileged_group_change with outcome added. Review against approved operations.",
+  "author": "Sonofmecury",
+  "logsource": {
+    "product": "windows"
+  },
+  "detection": {
+    "selection": {
+      "activity": "privileged_group_change",
+      "outcome": "added"
+    },
+    "condition": "selection"
+  },
+  "falsepositives": [
+    "Approved administration or incorrect upstream event classification"
+  ],
+  "level": "high",
+  "tags": [
+    "attack.t1098"
+  ]
+}
